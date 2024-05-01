@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
 
+from pageobjects.ShopPage import ShopPage
+
 
 class HomePage:
 
@@ -15,6 +17,8 @@ class HomePage:
     dob = (By.XPATH, "//input[@name='bday']")
     submit = (By.XPATH, "//input[@value='Submit']")
     alert_msg = (By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
+    shoplink = (By.XPATH, "//a[normalize-space()='Shop']")
+
     def getName(self):
         return self.driver.find_element(*HomePage.name)
 
@@ -41,3 +45,6 @@ class HomePage:
 
     def getAlertMSG(self):
         return self.driver.find_element(*HomePage.alert_msg)
+
+    def shopLink(self):
+        return self.driver.find_element(*HomePage.shoplink)

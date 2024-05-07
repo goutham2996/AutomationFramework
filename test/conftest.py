@@ -15,9 +15,9 @@ def setup(request):
     if browser_name == "chrome":
         service_obj = Service("D:\Softwares\chromedriver-win64\chromedriver-win64\chromedriver.exe")
         driver = webdriver.Chrome(service=service_obj)
-    elif browser_name == "firefox":
+    elif browser_name == "edge":
         service_obj = Service("D:\Softwares\edgedriver_win64\msedgedriver.exe")
-        driver = webdriver.Chrome(service=service_obj)
+        driver = webdriver.Edge(service=service_obj)
     elif browser_name == "IE":
         print("IE driver")
     driver.maximize_window()
